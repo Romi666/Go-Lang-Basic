@@ -17,10 +17,20 @@ func main() {
 	f.Print("Tebak angka : ")
 	scanner.Scan()
 	angka, _ = strconv.Atoi(scanner.Text())
-	if angka == 0 {
-		f.Println("Betul yang dimaksud", angka)
-	} else {
-		f.Println("Salah")
+	switch angka {
+	case 0:
+		f.Println("0")
+		fallthrough
+	case 1:
+		f.Println("1")
+		fallthrough
+	case 2:
+		f.Println("2")
+		fallthrough
+	case 3:
+		f.Println("3")
+		fallthrough
+	default:
+		f.Println("Salahhhh")
 	}
-	// f.Println("Kalimat yang dimasukan : " + scanner.Text() + "")
 }
