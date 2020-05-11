@@ -1,36 +1,24 @@
 package main
 
 import (
-	io "bufio"
 	f "fmt"
-	"os"
-	"strconv"
+	"time"
 )
 
 func main() {
-	var angka int
-	// f.Print("Masukan angka : ")
-	// f.Scan(&angka)
-	// f.Println("Angka yang dimasukkan : ", angka)
-
-	scanner := io.NewScanner(os.Stdin)
-	f.Print("Tebak angka : ")
-	scanner.Scan()
-	angka, _ = strconv.Atoi(scanner.Text())
-	switch angka {
-	case 0:
-		f.Println("0")
-		fallthrough
-	case 1:
-		f.Println("1")
-		fallthrough
-	case 2:
-		f.Println("2")
-		fallthrough
-	case 3:
-		f.Println("3")
-		fallthrough
-	default:
-		f.Println("Salahhhh")
+	// sum := 0
+	// for i := 0; i < 10; i++ {
+	// 	sum += i
+	// }
+	// f.Print(sum)
+	detik := 0
+	for {
+		time.Sleep(1 * time.Second)
+		detik++
+		f.Println(detik)
+		if detik == 10 {
+			break
+		}
 	}
+	f.Println("Selesai")
 }
